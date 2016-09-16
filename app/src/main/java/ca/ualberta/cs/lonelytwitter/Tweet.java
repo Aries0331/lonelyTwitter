@@ -9,14 +9,12 @@ public abstract class Tweet {
     //attributes
     private String message; //private: only this class can change this virables
     private Date date;
-    //private  ABC mood;
     //public String s; //public: others can change it
     //protected String p; //protected: can only be used inherit
     //String nothing;
 
-    private ArrayList<SecondMood> tweetList = new ArrayList<SecondMood>();
-    //tweetList.add(SecondMood);
-    //tweetList.add(ThirdMood);
+    //each tweet has a list of moods
+    private ArrayList<ABC> MoodList;
 
     public Tweet(String message){ //constructor:set the same name as the class
         this.message= message; //key word this:the message in this class
