@@ -19,6 +19,11 @@ public abstract class Tweet implements Tweetable {
         this.date = date;
     }
 
+    @Override
+    public String toString(){
+        return message;
+    }
+
 
     public abstract Boolean isImportant();
 
