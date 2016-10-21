@@ -10,7 +10,6 @@ import com.searchly.jestdroid.JestDroidClient;
 import java.util.ArrayList;
 import java.util.List;
 
-import io.searchbox.client.JestClient;
 import io.searchbox.core.DocumentResult;
 import io.searchbox.core.Index;
 import io.searchbox.core.Search;
@@ -31,6 +30,9 @@ public class ElasticsearchTweetController {
             ArrayList<NormalTweet> tweets = new ArrayList<NormalTweet>();
 
             // assume that search_parameters[0] is the only search term we are interested in using
+
+           // String search_string = "{\"from\": 0, \"size\": 10000}";
+
             Search search = new Search.Builder(search_parameters[0])
                     .addIndex("testing")
                     .addType("tweet")
